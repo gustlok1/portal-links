@@ -20,6 +20,41 @@
     .spliter li:not(:last-of-type):after{
         content: ' | ';
     }
+    .dropdown-toggle.newStyles{
+        border: none;
+        background: none;
+        box-shadow: none;
+    }
+    .image{
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: 0 -0px;
+
+    }
+    .carousel-first-image{
+        background-image: url("./assets/imgs/img1.jpg");
+    }
+    .carousel-second-image{
+        background-image: url("./assets/imgs/img2.jpg");
+    }
+    .force-center{
+        margin: 0 auto;
+    }
+    /* .card{
+        width: 18rem;
+    } */
+    .cards{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    @media (max-width: 767.98px) {
+        .cards {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
 </style>
 <body>
     <div class="">
@@ -68,7 +103,7 @@
                     <ul class="d-flex m-1">
                         <li>
                             <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <button class="btn btn-secondary dropdown-toggle newStyles" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                               Dropdown button
                             </button>
                             <ul class="dropdown-menu">
@@ -85,6 +120,108 @@
                 </div>
             </div>
         </section>
+        <section style="height: 300px;" class="d-none">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" >
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                        <div class="d-block w-100 image carousel-first-image" style="height: 400px;"> </div>
+                        </div>
+                        <div class="carousel-item">
+                        <div class="d-block w-100 image carousel-second-image" style="height: 400px;"> </div>
+                        </div>
+                        <div class="carousel-item">
+                        <div class="d-block w-100 image carousel-first-image" style="height: 400px;"> </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+        </section>
+        <div id="meuCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-block w-100 image carousel-first-image" style="height: 400px;"> </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-block w-100 image carousel-second-image" style="height: 400px;"> </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-block w-100 image carousel-first-image" style="height: 400px;"> </div>
+                </div>
+            </div>
+
+            <!-- Botões de navegação -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#meuCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#meuCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#meuCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#meuCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#meuCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+        </div>
+
+        <section class="cards mt-2 d-flex flex-wrap justify-content-between col-md-10 force-center">
+            <div class="col-md-3">
+                <div class="card m-1">
+                    <div class="carousel-first-image" style="height:100px; background-size: cover;"></div>
+                    <div class="card-body">
+                        <p class="card-text text-dark">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card m-1">
+                    <div class="carousel-first-image" style="height:100px; background-size: cover;"></div>
+                    <div class="card-body">
+                        <p class="card-text text-dark">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card m-1">
+                    <div class="carousel-first-image" style="height:100px; background-size: cover;"></div>
+                    <div class="card-body">
+                        <p class="card-text text-dark">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card m-1">
+                    <div class="carousel-first-image" style="height:100px; background-size: cover;"></div>
+                    <div class="card-body">
+                        <p class="card-text text-dark">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 </body>
+<script>
+    // $(".dropdown-toggle.newStyles").on("mouseover", (e) => {
+    //     $(e.currentTarget).click();
+    // })
+    // $(".dropdown-toggle.newStyles").on("mouseleave", (e) => {
+    //     $(e.currentTarget).click();
+    // })
+</script>
 </html>
