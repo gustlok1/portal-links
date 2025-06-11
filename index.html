@@ -32,10 +32,14 @@
 
     }
     .carousel-first-image{
-        background-image: url("./assets/imgs/bg-etec.jpg");
+        background-image: url("./assets/imgs/etec-bg.jpg");
     }
     .carousel-second-image{
-        background-image: url("./assets/imgs/bg-etec.jpg");
+        background-image: url("./assets/imgs/etec-bg.jpg");
+    }
+    .santana-logo-bg{
+        background-image: url("./assets/imgs/novaLogo-santana.png");
+
     }
     .etec-bg{
         background-image: url("./assets/imgs/etec-logo.png");
@@ -142,45 +146,17 @@
                 </div>
             </div>
         </section>
-        <section style="height: 300px;" class="d-none">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" >
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                        <div class="d-block w-100 image carousel-first-image" style="height: 400px;"> </div>
-                        </div>
-                        <div class="carousel-item">
-                        <div class="d-block w-100 image carousel-second-image" style="height: 400px;"> </div>
-                        </div>
-                        <div class="carousel-item">
-                        <div class="d-block w-100 image carousel-first-image" style="height: 400px;"> </div>
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-
-        </section>
         <div id="meuCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="image santana-logo-bg position-absolute" style="height: 30px;"></div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <div class="d-block w-100 image carousel-first-image" style="height: 550px;"> </div>
+                    <div class="d-block w-100 image carousel-first-image" style="height: 350px; background-position: 0 -40px;"> </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="d-block w-100 image carousel-second-image" style="height: 550px;"> </div>
+                    <div class="d-block w-100 image carousel-second-image" style="height: 350px; background-position: 0 -40px;"> </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="d-block w-100 image carousel-first-image" style="height: 550px;"> </div>
+                    <div class="d-block w-100 image carousel-first-image" style="height: 350px; background-position: 0 -40px;"> </div>
                 </div>
             </div>
 
@@ -202,16 +178,19 @@
             </div>
         </div>
 
-        <section class="cards mt-2 d-flex flex-wrap justify-content-between col-md-10 force-center">
-            <div class="col-md-4 col-sm-12 mt-2">
+        <section class="cards mt-2 d-flex flex-wrap justify-content-around col-md-10 force-center">
+            <div class="col-md-4 col-sm-12 col-lg-3 mt-2">
                 <div class="card p-1 bg-light">
-                    <div class="image etec-bg" style="height:150px; background-size: contain;"></div>
+                    <div style="height:150px;"  class="d-flex align-items-center">
+
+                        <div class="image etec-bg col-12" style="height:75px; background-size: contain;"></div>
+                    </div>
                     <div class="card-body">
                         <a href="https://vestibulinho.etec.sp.gov.br/" class="card-text link-secondary p-2">Clique aqui para saber mais sobre a Etec e nossos treinamentos.</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-12 mt-2">
+            <div class="col-md-4 col-sm-12 col-lg-3 mt-2">
                 <div class="card p-1">
                     <div class="image biblioteca-bg" style="height:150px; background-size: cover;"></div>
                     <div class="card-body">
@@ -238,7 +217,7 @@
         </section>
     </div>
     <div class="footer-main bg-dark">
-        <h4>Footer funcionando</h3>
+        <!-- <h4>Footer funcionando</h3> -->
     </div>
 </body>
 <script>
