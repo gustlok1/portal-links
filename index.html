@@ -26,16 +26,22 @@
         box-shadow: none;
     }
     .image{
-        background-size:cover;
+        background-size: cover;
         background-repeat: no-repeat;
-        background-position: 0 -0px;
+        background-position: center;
 
     }
     .carousel-first-image{
-        background-image: url("./assets/imgs/img1.jpg");
+        background-image: url("./assets/imgs/bg-etec.jpg");
     }
     .carousel-second-image{
-        background-image: url("./assets/imgs/img2.jpg");
+        background-image: url("./assets/imgs/bg-etec.jpg");
+    }
+    .etec-bg{
+        background-image: url("./assets/imgs/etec-logo.png");
+    }
+    .biblioteca-bg{
+        background-image: url("./assets/imgs/library.png");
     }
     .force-center{
         margin: 0 auto;
@@ -48,16 +54,32 @@
         flex-direction: row;
         flex-wrap: wrap;
     }
+    .container-main{
+        height: calc(100vh - 50px);
+        overflow: auto;
+    }
+    .footer-main{
+        height: 50px;
+    }
     @media (max-width: 767.98px) {
         .cards {
             flex-direction: column;
             align-items: center;
         }
+        .image{
+            background-position: center;
+        }
+        .carousel-first-image{
+            background-image: url("./assets/imgs/bg-etec-mobile.jpg");
+        }
+        .carousel-second-image{
+            background-image: url("./assets/imgs/bg-etec-mobile.jpg");
+        }
     }
 
 </style>
 <body>
-    <div class="">
+    <div class="container-main">
         <div class="container-fluid bg-dark px-5 d-none d-lg-block">
             <div class="row gx-0">
                 <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
@@ -88,10 +110,10 @@
         </div>
         <section class="header-options p-2 d-flex align-items-center justify-content-between">
             <div>
-                <img src="/assets/imgs/logo-branco-contorno.png" alt="logo" style="height: 50px;">
+                <img src="./assets/imgs/logo-branco-contorno.png" alt="logo" style="height: 50px;">
             </div>
             <div class="d-flex flex-column">
-                <div class="d-flex justify-content-end">
+                <div class="d-flex justify-content-end d-none">
                     <ul class="d-flex m-1 font-sm spliter">
                         <li>Link 1</li> &ensp;
                         <li>Link 2</li> &ensp;
@@ -101,21 +123,21 @@
                 </div>
                 <div class="d-flex">
                     <ul class="d-flex m-1">
+                        <li></li> &ensp;
+                        <li></li> &ensp;
+                        <li></li> &ensp;
                         <li>
                             <div class="dropdown">
                             <button class="btn btn-secondary dropdown-toggle newStyles" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Dropdown button
+                              Área do Candidato
                             </button>
                             <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#">Action</a></li>
-                              <li><a class="dropdown-item" href="#">Another action</a></li>
-                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                              <li><a class="dropdown-item" href="https://alfred.com.br/login">Simulado</a></li>
+                              <li><a class="dropdown-item" href="#">Conteúdos Complementares</a></li>
+                              <li><a class="dropdown-item" href="https://classroom.google.com/c/Nzg2NjEwNDI2MDEy?cjc=qmf4g3xd">ClassRoom </a></li>
                             </ul>
                           </div>
-                        </li> &ensp;
-                        <li>Teste</li> &ensp;
-                        <li></li> &ensp;
-                        <li></li> &ensp;
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -152,13 +174,13 @@
         <div id="meuCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <div class="d-block w-100 image carousel-first-image" style="height: 400px;"> </div>
+                    <div class="d-block w-100 image carousel-first-image" style="height: 550px;"> </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="d-block w-100 image carousel-second-image" style="height: 400px;"> </div>
+                    <div class="d-block w-100 image carousel-second-image" style="height: 550px;"> </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="d-block w-100 image carousel-first-image" style="height: 400px;"> </div>
+                    <div class="d-block w-100 image carousel-first-image" style="height: 550px;"> </div>
                 </div>
             </div>
 
@@ -181,7 +203,23 @@
         </div>
 
         <section class="cards mt-2 d-flex flex-wrap justify-content-between col-md-10 force-center">
-            <div class="col-md-3">
+            <div class="col-md-4 col-sm-12 mt-2">
+                <div class="card p-1 bg-light">
+                    <div class="image etec-bg" style="height:150px; background-size: contain;"></div>
+                    <div class="card-body">
+                        <a href="https://vestibulinho.etec.sp.gov.br/" class="card-text link-secondary p-2">Clique aqui para saber mais sobre a Etec e nossos treinamentos.</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 mt-2">
+                <div class="card p-1">
+                    <div class="image biblioteca-bg" style="height:150px; background-size: cover;"></div>
+                    <div class="card-body">
+                        <a href="https://sistemacpv.com.br/segmento-de-conteudo/banco-de-livros-books" class="card-text link-secondary p-2">Clique aqui para nosso banco de livros.</a>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-md-3">
                 <div class="card m-1">
                     <div class="carousel-first-image" style="height:100px; background-size: cover;"></div>
                     <div class="card-body">
@@ -196,24 +234,11 @@
                         <p class="card-text text-dark">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card m-1">
-                    <div class="carousel-first-image" style="height:100px; background-size: cover;"></div>
-                    <div class="card-body">
-                        <p class="card-text text-dark">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card m-1">
-                    <div class="carousel-first-image" style="height:100px; background-size: cover;"></div>
-                    <div class="card-body">
-                        <p class="card-text text-dark">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
+            </div> -->
         </section>
+    </div>
+    <div class="footer-main bg-dark">
+        <h4>Footer funcionando</h3>
     </div>
 </body>
 <script>
